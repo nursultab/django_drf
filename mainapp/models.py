@@ -43,7 +43,7 @@ class Clas(models.Model):
 
 class Student(models.Model):
     student_name = models.CharField(max_length=127)
-    grade_1 = models.CharField(max_length=127)
+    grade_1 = models.CharField(max_length=129)
     clas = models.ForeignKey(
         Clas, on_delete=models.CASCADE,null=True ,
         related_name='students'
