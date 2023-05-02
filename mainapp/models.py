@@ -26,7 +26,7 @@ class Clas(models.Model):
     grade = models.CharField(max_length=127)
     school = models.ForeignKey(
         School, on_delete=models.CASCADE,null=True,
-          related_name='claases'
+          related_name='clases'
           )
 
     
@@ -45,9 +45,9 @@ class Student(models.Model):
     student_name = models.CharField(max_length=127)
     grade_1 = models.CharField(max_length=129)
     clas = models.ForeignKey(
-        Clas, on_delete=models.CASCADE,null=True ,
+        Clas ,on_delete=models.CASCADE,null=True ,
         related_name='students'
-        )
+)
 
 
     class Meta:
@@ -58,4 +58,4 @@ class Student(models.Model):
 
 
     def __str__(self):
-        return f'{self.student_name},{self.grade_1}'
+        return f'{self.student_name},{self.grade_1}',
